@@ -1,0 +1,9 @@
+name: murder
+version: 1.0.0
+main: murder.Main
+description: murder plugin by sciencemj
+
+commands:
+  murder:
+    description: start murder
+    usage: murder start

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="murder:jar">
+    <output-path>$USER_HOME$/Desktop/servers/1.16.3/plugins</output-path>
+    <root id="archive" name="murder.jar">
+      <element id="module-output" name="murder" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/spigot-1.16.3.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/murder/Main.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
