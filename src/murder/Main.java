@@ -20,10 +20,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 public class Main extends JavaPlugin implements Listener {
     Player murderer;
@@ -207,6 +204,15 @@ public class Main extends JavaPlugin implements Listener {
         if (survivors == 0) {
             for (Player player : Bukkit.getOnlinePlayers()) {
                 player.sendTitle(ChatColor.RED + "머더 승리!", "", 20, 20, 0);
+            }
+            World world = getServer().getWorld("world");//get the world
+            List<Entity> entList = world.getEntities();//get all entities in the world
+
+            for(Entity current : entList) {//loop through the list
+                if (current instanceof Item) {
+                    if (((Item) current).getItemStack().equals(gunp))
+                        current.remove();
+                }
             }
             game = false;
         }
