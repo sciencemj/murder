@@ -55,7 +55,7 @@ public class Main extends JavaPlugin implements Listener {
                     murderer.getWorld().dropItem(l, gunp);
                 }
             }
-        }, 0L,60L);
+        }, 0L,45L);
     }
 
 
@@ -86,7 +86,7 @@ public class Main extends JavaPlugin implements Listener {
                     murderer = ps[r.nextInt(ps.length)];
                     murderer.sendTitle(ChatColor.RED + "머더입니다", "", 20, 20, 0);
                     gunner = ps[r.nextInt(ps.length)];
-                    while (murderer == gunner)
+                    while (murderer == gunner && ps.length != 1)
                         gunner = ps[r.nextInt(ps.length)];
                     gunner.sendTitle(ChatColor.GREEN + "총잡이입니다", "", 20, 20, 0);
                     gunner.getInventory().addItem(gun);
